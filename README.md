@@ -25,3 +25,10 @@ chmod +x install.sh
 
 # Execute the deployment with elevated privileges
 sudo ./install.sh
+
+
+Maintaining Across Kernel Updates
+
+When Kali updates its core Linux kernel via standard system upgrades, hypervisor modules may drop out of alignment. You do not need to re-run the entire payload. Simply invoke the integrated module builder:
+
+sudo vmware-modconfig --console --install-all
